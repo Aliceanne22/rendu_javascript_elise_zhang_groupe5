@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <script src="forms.js" defer></script>
+    <title>Formulaire d'inscription</title>
+</head>
+
+
+  <div class="message-error message-disappear"> Erreur : 
+      <ul>
+        <li class="message-error-pseudo message-disappear"> Pseudo trop court</li>
+        <li class="message-error-email message-disappear"> Adresse email invalide</li>
+        <li class="message-error-mdp message-disappear"> Mot de passe trop court</li>
+        <li class="message-error-mdp2 message-disappear"> Mot de passe pas pareil</li>
+      </ul>
+  </div>
+  <div class="message-success message-disappear">
+    Formulaire envoyé!
+  </div>
+  <form action="" method="POST" enctype="multipart/form-data">
+    <div>
+      <label for="pseudo">Pseudo</label>
+      <input type="text" name="pseudo" id="pseudo" autocomplete="off"/>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" autocomplete="off"/>
+    </div>
+    <div>
+      <label for="password">Mot de passe</label>
+      <input type="password" name="password" id="password" autocomplete="off"/>
+    </div>
+    <div>
+      <label for="password2">Entrer à nouveau le mot de passe</label>
+      <input type="password" name="password2" id="password2" autocomplete="off"/>
+    </div>
+    <button type="submit">S'inscrire</button>
+  </form>
+
+    
+</body>
+</html>

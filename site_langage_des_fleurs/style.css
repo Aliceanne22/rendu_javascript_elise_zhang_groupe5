@@ -1,0 +1,566 @@
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0
+}
+
+/* astérisk = par défaut, lors des calculs de flex? */
+
+
+.presentation-contenu {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.bloc-1 {
+	width: 50%;
+	height: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+	.bloc-1 {
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	.bloc-1 {
+		width: 100%;
+	}
+}
+
+
+.body {
+	line-height: 1.4;
+	font-family: "Century Gothic";
+	background-color:rgb(214,242,220);
+	color: rgb(50, 139, 69);
+	transition: ease 0.5s;
+}
+
+h1 {
+	font-size: 35px;
+	margin-left: 5%;
+}
+
+h2 {
+	font-size: 30px;
+	margin-top: 25px;
+	margin-left: 7%;
+	margin-bottom: 2%;
+}
+
+h3 {
+	font-size: 25px;
+	margin-left: 7%;
+	margin-bottom: 10px;
+	margin-top: 1%;
+}
+
+h4 {
+	font-size: 20px;
+	margin-left: 7%;
+	margin-bottom: 10px;
+	margin-top: 1%;
+}
+
+.bandeau {
+    background-color: rgb(109, 214, 130);
+    border-bottom: 2px solid rgb(50, 107, 62);
+    position: fixed;
+    z-index: 10; /* Ensure the bandeau stays on top */
+    width: 100%; /* Add width if needed to ensure it stretches across the screen */
+	transition: ease 0.3s;
+}
+
+.barre_de_navigation {
+	margin-top: 10px;
+	margin-bottom: 100px;
+	margin-left: 7%;
+	background-color:rgb(180, 231, 192);
+	box-shadow: 15px 15px 0px rgb(62,196,88);
+	border: 3px solid rgb(59, 94, 66);
+	border-top: 3px solid rgb(59, 94, 66);
+	border-left: 3px solid rgb(59, 94, 66);
+	border-right: 3px solid rgb(59, 94, 66);
+	border-radius: 10px;
+	padding: 30px 0px 0px 0px;
+	max-width: 87%;
+	width: 87%;
+}
+
+
+.nav {
+	text-align: center;
+	padding-bottom: 30px;
+	font-size: 40px;
+	border-bottom: 3px solid rgb(62,196,88);
+}
+
+.navigation_bouton1 {
+	padding: 30px 12% 30px 12%; 
+	border-bottom-left-radius: 10px;
+	justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+	font-size: 150%;
+}
+
+.navigation_bouton2 {
+	padding: 30px 12% 30px 12%; 
+	border-right: 3px solid rgb(62,196,88);
+	border-left: 3px solid rgb(62,196,88);
+	justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+	font-size: 150%;
+}
+
+.navigation_bouton3 {
+	padding: 30px 12% 30px 12%;
+	border-bottom-right-radius: 10px;
+	justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+	font-size: 150%;
+}
+
+.texte-bandeau {
+	font-size: 150%;
+	margin-left: 20%;
+}
+
+
+.aligner {
+    display: flex;
+    align-items: center; /* Vertically center the image and header text */
+}
+
+.logo {
+    margin-right: 50px; 
+	margin-left: 50px;
+}
+
+
+.link {
+	display: flex;
+	justify-content: space-evenly;
+} 
+
+
+.link a {
+    text-decoration: none;
+	color: white;
+    display: inline-block; /* ensures that the <a> elements are treated as block-like elements, so the transform property can be applied.*/
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.link a:hover {
+    color: rgb(120, 121, 138);
+    text-decoration: none;
+    transform: scale(1.2); /* Scale effect on hover */
+    z-index: 1; /* Ensure the hovered element is above other elements but below bandeau */
+}
+
+.link img:hover {
+	transform: scale(1.2); /* Scale effect on hover */
+    z-index: 1; /* Ensure the hovered element is above other elements but below bandeau */
+}
+
+.slogan {
+	text-align: center;
+	max-width: 95%;
+	width: 95%;
+	margin-left: 30px;
+	margin-top: 170px;
+	padding: 50px 0px 50px 0px
+}
+
+
+.image {
+	width: 100%;
+    height: auto; /* Keep the aspect ratio intact */
+    display: block; /* Ensure no extra space below the image */
+	border: 2px solid rgb(58, 58, 68);
+}
+
+
+.image2 {
+	width: 85%;
+	max-width: 85%;
+	height: auto;
+	margin-top: 3%;
+	margin-bottom: 1%;
+	align-items: center;
+	border: 5px solid rgb(58, 58, 68);
+}
+
+
+.images_des_fleurs {
+	margin-left: 3%;
+	margin-top: 3%;
+}
+
+
+.images_des_fleurs a {
+    max-width: 19%; /* Each image will take a maximum of 18% of the container width */
+	margin-bottom: 1%;
+}
+
+.images_des_fleurs a:hover {
+    transform: scale(1.11); /* Slightly zoom in on hover */
+	transition: transform 0.3s ease;
+}
+
+.gap a {
+	margin: 0.5%;
+}
+
+.details_fleur {
+	padding-bottom: 20px;
+	border-bottom: 2px solid rgb(58, 58, 68);
+}
+
+.centrer-image {
+	text-align: center;
+}
+
+
+p {
+	font-size: 120%;
+	margin-left: 7%;
+	margin-right: 3%;
+}
+
+.fleur-liste {
+	font-size: 20px;
+	margin-left: 10%;
+	margin-bottom: 20px;
+}
+
+.fleur-liste2 {
+    margin-left: 3%;
+}
+
+.flex {
+	display: flex;
+	margin-left: 3.5%;
+	margin-top: 1%;
+}
+
+.conteneur1 {
+	width: 50%
+}
+
+.conteneur2 {
+	width: 50%;
+}
+
+.pages {
+	text-align: center;
+	margin-top: 5%;
+}
+
+.pages a {
+	text-align: center;
+	margin-top: 5%;
+	text-decoration: none;
+}
+
+
+
+
+.footer {
+    background-color: rgb(58, 58, 68);
+    color: #f1f1f1;
+    padding-top: 20px;
+    text-align: center;
+	margin-top: 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    max-width: 25%;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Javascript */
+
+
+
+.buttonColorChange {
+    text-align: center;
+    transition: ease 0.3s;
+}
+
+.buttonColorChange-tree {
+	border-radius: 50%;
+	border: 2px solid rgb(50, 107, 62);
+	transition: ease 0.3s;
+}
+
+.buttonColorChange-sakura {
+	border-radius: 50%;
+	border: 2px solid rgb(139, 50, 77);
+	transition: ease 0.3s;
+}
+
+.changeMode {
+	margin-left: 45%;
+}
+
+
+.bodyChange {
+	background-color:rgb(242, 214, 228);
+	color: rgb(139, 50, 77);
+    transition: ease 0.5s;
+}
+
+
+.bandeau-sakura {
+    background-color: rgb(219, 116, 180);
+    border-bottom: 2px solid rgb(139, 50, 77);
+    position: fixed;
+    z-index: 10; /* Ensure the bandeau stays on top */
+    width: 100%; /* Add width if needed to ensure it stretches across the screen */
+	transition: ease 0.3s;
+}
+
+
+
+
+.barre_de_navigation-sakura {
+	margin-top: 10px;
+	margin-bottom: 100px;
+	margin-left: 7%;
+	background-color:rgb(231, 180, 210);
+	box-shadow: 15px 15px 0px rgb(219, 116, 180);
+	border: 3px solid rgb(94, 59, 75);
+	border-top: 3px solid rgb(94, 59, 75);
+	border-left: 3px solid rgb(94, 59, 75);
+	border-right: 3px solid rgb(94, 59, 75);
+	border-radius: 10px;
+	padding: 30px 0px 0px 0px;
+	max-width: 87%;
+	width: 87%;
+}
+
+.nav-sakura {
+	text-align: center;
+	padding-bottom: 30px;
+	font-size: 40px;
+	border-bottom: 3px solid rgb(219, 116, 180);
+}
+
+
+.navigation_bouton2-sakura {
+	padding: 30px 12% 30px 12%; 
+	border-right: 3px solid rgb(219, 116, 180);
+	border-left: 3px solid rgb(219, 116, 180);
+	justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+	font-size: 150%;
+}
+
+
+
+
+
+
+
+/* Inscription */
+
+.inscription {
+	margin-left: 17%;
+}
+
+
+
+
+/* Tab */
+
+.tabMenu {
+    display: flex;
+	margin-left: 5%;
+}
+
+.contenu {
+	margin-left: 5%;
+	margin-right: 3%;
+	padding-bottom: 100px;
+}
+
+.contenu p {
+	margin-left: 5%;
+}
+
+.contenu h3 {
+	margin-left: 5%;
+}
+
+
+
+/* Tab Rose */
+
+.tabMenu .tabRose {
+    display: block;
+	visibility: visible;
+    background: lightgray;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.tabMenu .tabRose:hover {
+    background: darkgray;
+}
+
+.tabMenu .tabRose-active {
+    background: gray;
+}
+
+
+.contenuRose {
+	visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease, visibility 0.5s ease;
+}
+
+.contenuRose-active {
+    display: block;
+	visibility: visible;
+    height: fit-content; /* Allow height to adjust automatically */
+    opacity: 1;
+    padding-bottom: 10px;
+    background-color: rgb(207, 207, 207);
+}
+
+
+/* Tab Tournesol */
+
+.tabMenu .tabTournesol {
+    display: block;
+	visibility: visible;
+    background: lightgray;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.tabMenu .tabTournesol:hover {
+    background: darkgray;
+}
+
+.tabMenu .tabTournesol-active {
+    background: gray;
+}
+
+
+.contenuTournesol {
+	visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease, visibility 0.5s ease;
+}
+
+.contenuTournesol-active {
+    display: block;
+	visibility: visible;
+    height: fit-content; /* Allow height to adjust automatically */
+    opacity: 1;
+    padding-bottom: 10px;
+    background-color: rgb(207, 207, 207);
+}
+
+
+
+
+
+/* Tab Pivoine */
+
+.tabMenu .tabPivoine {
+    display: block;
+	visibility: visible;
+    background: lightgray;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.tabMenu .tabPivoine:hover {
+    background: darkgray;
+}
+
+.tabMenu .tabPivoine-active {
+    background: gray;
+}
+
+
+.contenuPivoine {
+	visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease, visibility 0.5s ease;
+}
+
+.contenuPivoine-active {
+    display: block;
+	visibility: visible;
+    height: fit-content; /* Allow height to adjust automatically */
+    opacity: 1;
+    padding-bottom: 10px;
+    background-color: rgb(207, 207, 207);
+}
+
+
+
+
+
